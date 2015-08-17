@@ -1,0 +1,113 @@
+html{position: relative; min-height: 100%;}
+body{margin: 0 0 170px;}/*margin-bottom = footer height*/
+
+
+
+/*TOPO*/
+
+#nav_top a{color: #f5f5f5;}
+#nav_top a:hover{color: #00b49d;padding-bottom: 4px; border-bottom: 2px solid #00b49d;transition: all 0.2s linear; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear;}
+
+/*FIM DO TOPO*/
+
+/*CLASSE PARA ARTICLES*/
+.articles{position: relative;  left: auto; padding: 5% 0;}
+/*FIM DA CLASSE PARA ARTICLES*/
+
+/*IMAGENS DE PERFIL E DE FUNDO*/
+#div_img_header {
+    background:url('../img/fundo-cooffe.jpg') no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+    max-height: 100%;
+    min-height: 400px;
+    height: 800px;
+    margin-bottom: 130px;
+    padding: 0;
+}
+
+#div_img_header div{height: inherit; width: inherit; background-color: rgba(0,0,0,0.5);position: relative; top: 0;}
+
+#div_whoami{
+    width: 100%; position: absolute; top: 250px; color: #00b49d; text-align: center;  padding: 6.25%;
+}
+
+#author_img{width: 200px; height: 200px; position: relative;transform: translate(-50%, -50%); left: 50%;border: 5px solid #f5f5f5;z-index: 999;}
+/*FIM DAS IMAGENS DE PERFIL E DE FUNDO*/
+
+.close_menu{background: #ff4644 url('../img/menu2.png') 50% 50% no-repeat; top: 0;}
+.open_menu{background: #00b49d url('../img/menu2.png') 50% 50% no-repeat; top: 150px;}
+
+
+#container_about{padding:0px; margin-bottom: 30px;}
+
+
+/*ARTICLE DE HABILIDADES*/
+#div_content_skills{height: 11.96649381731153%; padding: 0; margin-bottom: 20px;padding-top: 40px;}
+.img_skill{width: 150px; height: 150px;display: inline-block;margin: 1.464128843338214%;}
+.img_skill_hover{position: relative; width: 100%; height: 100%;visibility: hidden;}
+.img_skill_hover span{position: relative; top:40%;}
+.img_skill:hover .img_skill_hover{background: rgba(255,70,68,0.9);visibility: visible;}
+.img_skill_css{background: url('../img/CSS3_Logo.svg') #fff 50% 50% no-repeat;background-size: 100px 100px;}
+.img_skill_html{background: url('../img/HTML5_Logo.svg') #fff 50% 50% no-repeat;background-size: 100px 100px;}
+.img_skill_jquery{background: url('../img/Jquery_Logo.svg') #fff 50% 50% no-repeat;background-size: 150px 150px;}
+.img_skill_python{background: url('../img/python_logo.svg') #fff 50% 50% no-repeat;background-size: 150px 150px;}
+/*FIM DO ARTICLE DE HABILIDADES*/
+
+
+/*ARTICLE DE CONTATOS*/
+#contact{height: 670px;}
+form{height: 200px;}
+form input, form textarea, form select{display: block; padding: 5px; height: 30%; width: 50%; min-width: 220px; position: relative; right: 0;left: 0; margin: auto;margin-bottom: 35px;border: 1px solid #fff;color:#a1a1a1;}
+form input:focus, form textarea:focus, form select:focus{border-color: #00b49d;outline: none;}
+.loader_ajax{position: fixed;top: 0; left: 0; width: 100%; height: 100vh; z-index: 2000;background:rgba(255,255,255,0.7) url('../img/loading_ajax.GIF') 50% 50% no-repeat;}
+.invalid_input {background: #F2DEDE !important;border: 1px solid #DDD !important; color: #B94A48 !important; height: 30%; width: 50%; min-width: 220px; position: relative; top:-80px;right: 0; left: 0;margin: auto; margin-bottom: -45px; z-index: 99; display: none;}
+/*FIM DO ARTICLE DE CONTATOS*/
+
+/*FOOTER*/
+#footer_pg{height:170px;padding-top: 24px; position: absolute; bottom: 0;overflow: hidden;}
+#section_footer_pg{height:70%;}
+#footer_article_social li{display: inline-block; margin-left: 2%;
+    animation: rotate_social_left 0.5s linear 1;
+    -webkit-animation: rotate_social_left 0.5s linear 1;
+    -moz-animation: rotate_social_left 0.5s linear 1;
+}
+#footer_article_social li:hover{
+    animation: rotate_social 0.5s linear 1;
+    -webkit-animation: rotate_social 0.5s linear 1;
+    -moz-animation: rotate_social 0.5s linear 1;
+}
+
+
+#footer_article_dev{position: absolute; bottom: 0; left:0;right:0;}
+
+@-webkit-keyframes rotate_social {
+    from {
+        transform:rotateY(0deg);
+        -webkit-transform:rotateY(0deg);
+        -moz-transform:rotateY(0deg);
+        -o-transform:rotateY(0deg);
+    }
+    to {
+        transform:rotateY(360deg);
+        -webkit-transform:rotateY(360deg);
+        -moz-transform:rotateY(360deg);
+        -o-transform:rotateY(360deg);
+    }
+}
+
+@-webkit-keyframes rotate_social_left {
+    from {
+        transform:rotateY(0deg);
+        -webkit-transform:rotateY(0deg);
+        -moz-transform:rotateY(0deg);
+        -o-transform:rotateY(0deg);
+    }
+    to {
+        transform:rotateY(360deg);
+        -webkit-transform:rotateY(360deg);
+        -moz-transform:rotateY(360deg);
+        -o-transform:rotateY(360deg);
+    }
+}
+/*FIM DO FOOTER*/

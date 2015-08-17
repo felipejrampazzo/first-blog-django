@@ -1,0 +1,27 @@
+/*ESTILO MENU*/
+@media all and (min-width : 901px) {
+    #header_top{padding:0 15px 12px 15px; position: fixed; top: auto; left: auto; width: 100%; z-index: 900;color: #00b49d;}
+    #header_top p{position: absolute; bottom: 0; left: 15px;}
+    #nav_top{display: block; position: relative; right: 0;top: 10px;}
+    #ul_nav li{display: inline-block; margin: 0 0 0 40px;}
+    #sub_title{position: absolute; top: 35px;}
+    
+    /*BOTAO VOLTAR AO TOPO*/
+    #button_top{height: 60px; width: 60px; position: fixed; bottom: 10px; right: 10px;z-index: 99; transition: all 0.3s linear; -webkit-transition: all 0.3s linear; -moz-transition: all 0.3s linear;-o-transition: all 0.3s linear;}
+    #button_top a{height: 100%; width: 100%; background: url('../img/up-arrow.png') no-repeat center center;}
+    #button_top:hover{background: #ff4644;transition: all 0.3s linear; -webkit-transition: all 0.3s linear; -moz-transition: all 0.3s linear;-o-transition: all 0.3s linear;}
+    /*FIM DO BOTAO VOLTAR AO TOPO*/
+}
+
+
+@media all and (max-width:900px){
+    #header_top h1, #sub_title{display: none;}
+    #icon_menu{width: 82px; height: 60px; box-shadow: 3px 3px 5px 0 rgba(50, 50, 50, 0.75);  -webkit-box-shadow: 3px 3px 5px 0 rgba(50, 50, 50, 0.75); -moz-box-shadow:3px 3px 5px 0px rgba(50, 50, 50, 0.75); box-shadow:3px 3px 5px 0px rgba(50, 50, 50, 0.75); cursor:pointer; z-index: 998; transition: all 0.3s linear;position: fixed;}
+    #nav_top{width: 100%; text-align: center;}
+    #ul_nav{width: 100%; position: fixed; z-index: 9998;height: 0px;}
+    #ul_nav li{ margin: 0 0 10px 0;position: relative;top: 0; visibility: hidden;}
+}
+/*FIM ESTILO MENU*/
+@media all and (max-width:320px){
+    #author_img{height: 160px; width: 160px;}
+}
