@@ -1,0 +1,102 @@
+    {% load static from staticfiles %}
+    <!DOCTYPE html>
+    <html>
+    <head lang="pt-br">
+        <meta charset="UTF-8">
+        <title>Felipe Rampazzo | Analista de Sistemas</title>
+            <meta charset="UTF-8" />
+            <meta name="description" content="Formado em Análise e Desenvolvimento de Sistemas pela FATEC de Presidente Prudente, programador, freelancer, entusiasta no desenvolvimento front-end e possui um amor discreto por matemática." />
+            <meta name="author" content="Felipe José Aguiar Rampazzo">
+            <meta name="robots" content="index, follow" />
+            <meta name="googlebot" content="index, follow" />
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {% block sytles %}
+            <link rel="icon" href="{% static 'img/perfil3.png' %}" type="image/x-icon">
+            <link href="{% static 'css/reset.css' %}" rel="stylesheet">
+            <link href="{% static 'css/boot.css' %}" rel="stylesheet">
+            <link href="{% static 'css/main_style.css' %}" rel="stylesheet">
+            <link href="{% static 'css/media.css' %}" rel="stylesheet">
+            <link href='http://fonts.googleapis.com/css?family=Raleway:100,400,300' rel='stylesheet' type='text/css'>
+        {% endblock %}
+    </head>
+    <body>
+        <header id="header_top">
+            <h1 id="name_top" class="fl-left font-thin fontsize2 cursor hidden">
+                Felipe Rampazzo
+            </h1>
+            <div id="icon_menu" class="radius-bottom center-box close_menu"></div>
+            <nav id="nav_top" class="fl-right">
+                <h1 class="fontzero">Menu Principal</h1>
+                <ul id="ul_nav" class="font-thin fontsize1a ds-block">
+                    {% url 'blog' as blog %}
+                    {% url 'home' as home %}
+                    <li><a href="{% url 'home' %}#top_document" {% if request.path == home %}class="scroll" {% endif %}>Home</a>
+                    </li>
+                    <li><a href="{% url 'home' %}#author_img" {% if request.path == home %}class="scroll" {% endif %}>Quem sou eu?</a>
+                    </li>
+                    <li><a href="{% url 'home' %}#skills" {% if request.path == home %}class="scroll" {% endif %}>Habilidades</a>
+                    </li>
+                    <li><a href="{% url 'home' %}#contact" {% if request.path == home %}class="scroll" {% endif %}>Contato</a>
+                    </li>
+                    <li><a href="{% url 'blog' %}">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="top_document"></div>
+
+        <!--Botao Voltar ao Topo-->
+        <div id="button_top" class="hidden circle bg-green">
+            <a href="#top_document" class="ds-block scroll"></a>
+        </div>
+
+        {% block content %}
+            {% block img_header %}
+            
+            {% endblock %}
+
+        {% endblock %}
+
+         <footer id="footer_pg" class="container bg-grey articles">
+            <section id="section_footer_pg">
+                <h1 class="fontzero">Felipe Rampazzo</h1>
+                <article id="footer_article_social" class="al-center">
+                    <h1>Siga-me nas redes sociais</h1>
+                    <br/>
+                    <ul>
+                        <li class="shoticon shoticon-facebook"><a target="_blank" href="https://www.facebook.com/felipe.rampazzo.5" class="fontzero circle" rel="nofollow">Facebook</a>
+                        </li>
+                        <li class="shoticon shoticon-google"><a target="_blank" href="https://plus.google.com/u/0/103995150652017149234/posts" class="fontzero circle" rel="nofollow">Google+</a>
+                        </li>
+                        <li class="shoticon shoticon-linkedin"><a target="_blank" href="https://br.linkedin.com/in/feliperampazzo" class="fontzero circle" rel="nofollow">Linkedin</a>
+                        </li>
+                    </ul>
+                </article>
+
+                <article id="footer_article_dev" class="al-center">
+                    <h1 class="fontzero">Desenvolvido por Felipe José Aguiar Rampazzo</h1>
+                    <p class="fontsize1 font-thin">&copy; 2015 - Felipe Rampazzo, Todos os Direitos Reservados!</p>
+                </article>
+            </section>
+        </footer>
+
+
+    {% block scripts %}
+        <!-- SCRIPTS -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-58973213-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+    {% endblock %}
+
+    </body>
+    </html>

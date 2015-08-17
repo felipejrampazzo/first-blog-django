@@ -1,0 +1,88 @@
+body{background: #f5f5f5; font-family: 'Raleway', sans-serif;}
+mark{padding: 5px 10px; background-color: #eee;}
+
+/*PALETA*/
+/*BACKGROUND*/
+.bg-body{background-color: #f5f5f5; color: #272727;}
+.bg-green{background-color: #00b49d; color: #fff;}
+.bg-grey{background-color: #373737; color: #fff;}
+.bg-red{background-color: #ff4644; color: #fff;}
+
+.color-grey{color: #373737;}
+.color-green{color:#00b49d;}
+
+/*FONT WEIGHT*/
+.font-thin{font-weight: 300 !important;}
+.font-light{font-weight: 400 !important;}
+.font-normal{font-weight: 500 !important;}
+
+/*FONT SIZE*/
+.fontzero{font-size: 0em !important;}
+.fontsize1{font-size: 1em;}
+.fontsize1a{font-size: 1.3em;}
+.fontsize1b{font-size: 1.3em;word-spacing: 0.3em;line-height: 1.5em;}
+.fontsize2{font-size: 2em;}
+.fontsize2b{font-size: 2.5em;}
+.fontsize3{font-size: 3em;}
+.fontsize3b{font-size: 3.5em;}
+
+/*BOOT
+CONTAINER*/
+.container{width: 100%;padding-top: 10px;}
+.content{width: 80%; margin: 0 10%; padding: 10px 0 40px 0;}
+
+/*HELPERS*/
+.textshadow{text-shadow: 1px 1px 0 #ccc;}
+.boxshadow{-webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.3); -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.3); box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.3);}
+.radius{-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
+.radius-top{-webkit-border-radius: 5px 5px 0px 0px; -moz-border-radius: 5px 5px 0px 0px; border-radius: 5px 5px 0px 0px;}
+.radius-bottom{-webkit-border-radius: 0px 0px 5px 5px; -moz-border-radius: 0px 0px 5px 5px; border-radius: 0px 0px 5px 5px;}
+.circle{-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;}
+.last{margin-right: 0;}
+.cursor{cursor: default;}
+.clear{clear: both;}
+.center-box{right: 0;
+    left: 0;
+    margin: auto;}
+.opacity0{opacity: 0;}
+.opacity1{opacity: 1;}
+.visible{visibility: visible;}
+.hidden{visibility: hidden;}
+.bd-bt-solid{
+    border-bottom: 1px solid #ccc;}
+ 
+/*text align*/
+.al-left{text-align: left;}
+.al-right{text-align: right;}
+.al-center{text-align: center;}
+.al-justify{text-align: justify;}
+
+/*float*/
+.fl-left{float: left;}
+.fl-right{float: right;}
+.fl-none{float: none;}
+
+/*display*/
+.ds-block{display: block;}
+.ds-inblock{display: inline-block;}
+.ds-inline{display: inline;}
+.ds-none{display: none;}
+
+
+/*BOTÕES*/
+.btn{cursor: pointer;border:0; text-decoration: none;}
+.btn:active{box-shadow: none; top: 5px;text-decoration: none;-moz-box-shadow: none;-webkit-box-shadow: none;-o-box-shadow: none;}
+.btn-green{background-color: #00b49d; color: #fff; transition: all 0.4s ease; -webkit-transition: all 0.4s ease; -moz-transition: all 0.4s ease;box-shadow:0 5px 0 #008271;-moz-box-shadow:0 5px 0 #008271;-webkit-box-shadow:0 5px 0 #008271;-o-box-shadow:0 5px 0 #008271;}
+.btn-green:hover{background: #ff4644; color: #f5f5f5; transition: all 0.4s ease; -webkit-transition: all 0.4s ease; -moz-transition: all 0.4s ease;box-shadow:0 5px 0 #b73432;-webkit-box-shadow:0 5px 0 #b73432;-moz-box-shadow:0 5px 0 #b73432;-o-box-shadow:0 5px 0 #b73432;}
+
+
+
+/*SHORT ICONS*/
+.shoticon{height: 62px; width: 62px;}
+.shoticon a{display: block; height: 100%; width: 100%;}
+.shoticon-facebook{background: url('../img/facebook1.png') no-repeat;}
+.shoticon-google{background:url('../img/google1.png') no-repeat;}
+.shoticon-linkedin{background: url('../img/linkedin1.png') no-repeat;}
+
+
+/*DRAWS CSS */

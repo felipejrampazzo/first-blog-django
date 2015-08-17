@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block sytles %}
+    {{ block.super }}
+    <link href="{% static 'css/blog_style.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <article id="post" class="posts content al-center bg-body">
+        <h1 class="fontsize2b font-normal color-green">{{ object.title }}</h1>
+        <p class="fontsize1b font-light al-justify">{{ object.text }}</p>
+    </article>
+{% endblock %}

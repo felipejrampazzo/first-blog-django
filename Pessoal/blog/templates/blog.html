@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block sytles %}
+    {{ block.super }}
+    <link href="{% static 'css/blog_style.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div id="al_posts">
+    {% for post in post_list %}
+        <article class=" posts content bd-bt-solid bg-body">
+            <span class="post_date bg-green ds-block radius-bottom fontsize2 al-center font-thin">{{ post.created|date:"d" }}</span>
+            {% if post.image %}<img id="img_post" class="fl-left" src="{{ post.image.url }}" alt="{{ post.title }}">{% endif %}
+
+            <h1 class="fontsize2 font-normal"><a href="{{ post.slug }}" class="color-green">{{ post.title }}</a></h1>
+
+        <div class="div_dates_created fontsize1 font-thin">
+            <span class="category">Postado em
+                    {% for category in post.category.all %}
+                        <a href="tag/{{ category.name }}"> {{ category.name }}</a>
+                        {% if not forloop.last %}
+                            ,
+                        {% endif %}
+                    {% endfor %}
+            </span>
+            <span class="post_created">{{ post.created|date:"d/M/Y H:i"}}</span>
+            {% if post.created != post.modified %}<span class="post_created">Modificado: {{ post.modified|date:"d/M/Y H:i" }}</span>{% endif %}
+        </div>
+
+            <div class="float-right">
+                <p class="fontsize1b font-light al-justify ">{{ post.text|truncatewords:20 }}
+                    <a href="{{ post.slug }}" class="color-green">Continue lendo</a>
+                </p>
+            </div>
+        </article>
+    {% endfor %}
+    </div>
+    <div id="pagination" class="al-center fontsize1a">
+        {% if is_paginated %}
+
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}">Anterior</a>
+            {% endif %}
+
+            {% for pg in paginator.page_range %}
+                <a href="?page={{ pg }}" class="{% ifequal pg page_obj.number  %}bg-grey{% endifequal %}">{{ pg }}</a>
+            {% endfor %}
+
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">Próximo</a>
+            {% endif %}
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    {% block img_header %}
+        <!--Imagem de Chamada-->
+        <div id="div_img_header" class="container">
+            <div></div>
+            <span id="div_whoami" class="ds-block">
+                <label class="font-normal fontsize3b">Felipe Rampazzo</label><br>
+                <label class="font-thin fontsize2">Analista de Sistemas e Desenvolvedor Web</label>
+            </span>
+            <img id="author_img" title="Foto Perfil Felipe Rampazzo" alt="Perfil Felipe Rampazzo" src="{% static 'img/perfil3.png' %}" class="circle" />
+        </div>
+    {% endblock %}
+
+
+            <!-- Seção About -->
+            <article id="container_about" class="container bg-body articles">
+                <h1 class="al-center fontsize2b">Quem Sou Eu?</h1>
+                <br/>
+                <p class="fontsize1b al-center content">
+                    Olá, Bem-vindo ao meu site pessoal. Meu nome é Felipe José Aguiar Rampazzo, tenho 20 anos e sou
+                    formado em Análise e Desenvolvimento de Sistemas pela FATEC de Presidente Prudente.
+                    Gosto de tudo que envolve o maravilhoso mundo da tecnologia, além de filmes, livros e matemática.
+                    Entre em contato comigo, logo abaixo (vou te dar uma ajudinha: <a href="#contact" class="scroll" style="color:#00b49d;">
+                    Clique Aqui!</a>), para assuntos de negócios ou só para jogar conversa fora mesmo. Espero seu contato!
+                </p>
+            </article>
+
+            <!--Frases-->
+
+            <div id="skills"></div>
+            <article class="container bg-green articles">
+                <header>
+                    <h1 class="al-center fontsize2b">Habilidades</h1>
+                    <p class="al-center fontsize2 font-thin">Posso dizer que sou bom em:</p>
+                </header>
+                <div id="div_content_skills" class="al-center fontsize1a">
+                    <div class="img_skill img_skill_html circle"><div class="img_skill_hover circle center-box"><span>+HTML5</span></div>
+                    </div>
+                    <div class="img_skill img_skill_css circle"><div class="img_skill_hover circle center-box"><span>+CSS3</span></div>
+                    </div>
+                    <div class="img_skill img_skill_jquery circle"><div class="img_skill_hover circle center-box"><span>+jQuery</span></div>
+                    </div>
+                    <div class="img_skill img_skill_python circle"><div class="img_skill_hover circle center-box"><span>+Python</span></div>
+                    </div>
+                </div>
+            </article>
+
+            <div id="loading_ajax"></div>
+            <div id="contact">
+                <article class="bg-body container al-center articles">
+                    <header>
+                        <h1 class="fontsize2b">Contatos</h1>
+                        <p class="fontsize2 font-thin">Entre em contato para obter mais informações</p>
+                    </header>
+                    <section>
+                        <form id="form_contact" action="contact-form.php" method="post"  class="content center-box">
+                            <h1 class="fontzero">Formulário de Contatos</h1>
+                            <label>
+                                <span>Nome</span>
+
+                                <input id="name" type="text" name="name" title="Digite seu nome completo" placeholder="Digite seu nome completo"/>
+                                <span id="error_name" class="invalid_input"></span>
+                            </label>
+
+                            <label>
+                                <span>Email</span>
+
+                                <input id="email" type="email" name="email" title="Digite seu email" placeholder="Digite um email válido"/>
+                                <span id="error_email" class="invalid_input"></span>
+                            </label>
+
+                            <label>
+                                <span>Mensagem</span>
+
+                                <textarea id="message" name="message" title="Digite sua mensagem" placeholder="Digite sua mensagem..."></textarea>
+                                <span id="error_msg" class="invalid_input"></span>
+                            </label>
+                            <label class="ds-none">
+                                <input id="captcha" type="text" name="text" title="Campo de verificação" placeholder="Não preencha este campo"/>
+                            </label>
+                            <label>
+                                <span>Assunto</span>
+                                <select id="subject" name="subject" class="font-thin fontsize1">
+                                    <option value="Mensagem_Trabalho">Assuntos de trabalho</option>
+                                    <option value="Mensagem_Geral">Questões gerais</option>
+                                </select>
+                            </label>
+                            <br/>
+                            <label>
+                                <input id="btn_enviar" type="submit" name="submit" title="Enviar Messagem" class="btn btn-green" value="Enviar"/>
+                            </label>
+                        </form>
+                    </section>
+                </article>
+            </div>
+{% endblock %}

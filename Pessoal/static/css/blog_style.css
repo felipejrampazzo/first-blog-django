@@ -1,0 +1,17 @@
+#al_posts{padding-top: 50px; }
+#al_posts div{width: 100%;}
+#al_posts img{width: 25%; min-width: 140px; margin-right: 10%;}
+
+#al_posts .div_dates_created span{display: block; margin-bottom: 5px; }
+#al_posts .category:before{content: url("../img/hierarchy.svg")}
+#al_posts .post_created:before{content: url("../img/month.svg")}
+
+.posts{padding: 30px 0 50px; }
+.posts h1{padding-bottom: 20px;}
+.posts p{line-height:170%; overflow: hidden;}
+.post_date{position: relative; top: 40px; width: 10%; min-width: 50px; height: 40px;}
+
+#post{padding-top: 80px;}
+
+#pagination{padding: 30px;}
+#pagination a{color: #272727; margin-left: 10px; padding: 5px;}
