@@ -25,8 +25,12 @@ class Migration(migrations.Migration):
                 ('text', models.TextField()),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
-                ('slug', models.SlugField()),
-                ('category', models.ForeignKey(to='blog.Category')),
+                ('slug', models.SlugField(unique=True)),
+                ('image', models.ImageField(upload_to='img/')),
+                ('category', models.ManyToManyField(to='blog.Category')),
             ],
+            options={
+                'ordering': ('-created',),
+            },
         ),
     ]

@@ -1,6 +1,7 @@
+/*BLOG*/
 #al_posts{padding-top: 50px; }
 #al_posts div{width: 100%;}
-#al_posts img{width: 25%; min-width: 140px; margin-right: 10%;}
+#al_posts img{width: 25%; min-width: 140px; margin-right: 10%; max-height: 200px; min-height: 140px; height: 100%;}
 
 #al_posts .div_dates_created span{display: block; margin-bottom: 5px; }
 #al_posts .category:before{content: url("../img/hierarchy.svg")}
@@ -11,7 +12,17 @@
 .posts p{line-height:170%; overflow: hidden;}
 .post_date{position: relative; top: 40px; width: 10%; min-width: 50px; height: 40px;}
 
-#post{padding-top: 80px;}
-
 #pagination{padding: 30px;}
 #pagination a{color: #272727; margin-left: 10px; padding: 5px;}
+/*FIM BLOG*/
+
+/*CATEGORIES*/
+.category_page_div{padding-top: 50px;}
+.category_page_span{padding-bottom: 20px;}
+/*FIM CATEGORIES*/
+
+/*POSTS*/
+#post{height: 100%; padding-top: 80px;}
+#post img{padding-bottom: 30px; width: 100%; height: auto;}
+
+/*FIM POSTS*/

@@ -1,9 +1,7 @@
 from django.db import models
 
 class Category(models.Model):
-    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100, blank=False)
-    categories = models.Manager()
 
     def __str__(self):
         return self.name
@@ -17,7 +15,6 @@ class Post(models.Model):
     slug = models.SlugField(blank=False, unique=True)
     category = models.ManyToManyField(Category)
     image = models.ImageField(upload_to='img/')
-    posts = models.Manager()
 
     class Meta():
         ordering = ('-created',)

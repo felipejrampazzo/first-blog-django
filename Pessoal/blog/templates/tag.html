@@ -1,6 +1,27 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block sytles %}
+    {{ block.super }}
+    <link href="{% static 'css/blog_style.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
 
 {% block content %}
-    <h1>Ola</h1>
+    <section class="container">
+    <div class="content al-center category_page_div">
+        <h1 class="al-left font-normal fontsize2 category_page_span">{{ category.name }}</h1>
+            {% for post in posts %}
+                <article class="category_page_span">
+                    <h1 class="ds-block bd-tp-solid fontsize1b font-light"><a href="{% url "blog" %}{{ post.slug }}" class="color-green">{{ post.title }}</a></h1>
+                    <h2 class="font-thin fontsize08 category_page_span">
+                        {% if post.created != post.modified %}
+                            {{ post.modified|date:"D d M Y" }}
+                            {% else %}
+                            {{ post.created|date:"D d M Y" }}
+                        {% endif %}
+                    </h2>
+                </article>
+            {% endfor %}
 
+        </div>
+    </section>
 {% endblock %}

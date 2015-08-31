@@ -18,6 +18,7 @@ mark{padding: 5px 10px; background-color: #eee;}
 
 /*FONT SIZE*/
 .fontzero{font-size: 0em !important;}
+.fontsize08{font-size: 0.8em;}
 .fontsize1{font-size: 1em;}
 .fontsize1a{font-size: 1.3em;}
 .fontsize1b{font-size: 1.3em;word-spacing: 0.3em;line-height: 1.5em;}
@@ -48,8 +49,8 @@ CONTAINER*/
 .opacity1{opacity: 1;}
 .visible{visibility: visible;}
 .hidden{visibility: hidden;}
-.bd-bt-solid{
-    border-bottom: 1px solid #ccc;}
+.bd-bt-solid{border-bottom: 1px solid #ccc;}
+.bd-tp-solid{border-top: 1px solid #ccc;}
  
 /*text align*/
 .al-left{text-align: left;}

@@ -11,7 +11,7 @@
     {% for post in post_list %}
         <article class=" posts content bd-bt-solid bg-body">
             <span class="post_date bg-green ds-block radius-bottom fontsize2 al-center font-thin">{{ post.created|date:"d" }}</span>
-            {% if post.image %}<img id="img_post" class="fl-left" src="{{ post.image.url }}" alt="{{ post.title }}">{% endif %}
+            {% if post.image %}<img class="fl-left" src="{{ post.image.url }}" alt="{{ post.title }}">{% endif %}
 
             <h1 class="fontsize2 font-normal"><a href="{{ post.slug }}" class="color-green">{{ post.title }}</a></h1>
 

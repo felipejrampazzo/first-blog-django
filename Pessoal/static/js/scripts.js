@@ -11,11 +11,16 @@ $(document).ready(function ($) {
 
 
 //SUMIR COM O MENU E BOTAO VOLTAR AO TOPO
+function url_blog(){
+    var path = window.location.pathname;
+    return path.indexOf('/blog/') > -1;
+}
+
 $(document).ready(function () {
     var lastScrollTop = 0;
     var header = $("#header_top");
     var icon_menu=$("#icon_menu");
-    if(menu_blog()){
+    if(url_blog()){
         header.addClass('bg-grey');
     }
     $(window).scroll(function () {
@@ -25,7 +30,7 @@ $(document).ready(function () {
             $('#name_top').removeClass('hidden');
         } else {
             $("#button_top").addClass('hidden');
-            if(!menu_blog()){
+            if(!url_blog()){
                 header.removeClass('bg-grey');
             }
             $('#name_top').addClass('hidden');
@@ -169,12 +174,6 @@ jQuery(document).ready(function(){
         }
     });
 });
-
-function menu_blog(){
-    var path = window.location.pathname;
-    return (path.contains('/blog/'));
-};
-
 
 
 

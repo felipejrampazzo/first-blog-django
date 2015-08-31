@@ -8,7 +8,8 @@
 
 {% block content %}
     <article id="post" class="posts content al-center bg-body">
-        <h1 class="fontsize2b font-normal color-green">{{ object.title }}</h1>
+        <h1 id="title_post" class="fontsize3b font-normal color-green">{{ object.title }}</h1>
+        {% if object.image %}<img src="{{ object.image.url }}" alt="{{ object.title }}">{% endif %}
         <p class="fontsize1b font-light al-justify">{{ object.text }}</p>
     </article>
 {% endblock %}
