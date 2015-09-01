@@ -4,7 +4,7 @@ from django.conf.global_settings import STATICFILES_DIRS, MEDIA_URL, MEDIA_ROOT,
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-SECRET_KEY = 'gxe@y^(jm6&_%1zfq15_b*id#lauq*65osl5x+(^nqhib!ikhu'
+SECRET_KEY = ''
 
 DEBUG = True
 
