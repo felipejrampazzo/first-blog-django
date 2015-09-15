@@ -3,3 +3,5 @@ __pycache__
 .idea
 db.sqlite3
 .DB_STORE
+*.sublime-project
+*.sublime-workspace
